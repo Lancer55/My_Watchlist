@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Watchlist</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <section id="welcome">
+        <h1>Welcome to My Watchlist</h1>
+        <p>This is a curated collection of movies and serials I recommend. They are listed in no particular order.</p>
+    </section>
+
+    <section id="search-section">
+        <input type="text" id="searchInput" placeholder="Search for a movie or serial..." onkeyup="filterList()">
+    </section>
+
+    <section id="list-section">
+        <table id="watchlistTable">
+            <thead>
+                <tr>
+                    <th>Movies</th>
+                    <th>Serials</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+                </tbody>
+        </table>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
