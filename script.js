@@ -2,8 +2,20 @@
 // Add your movies and series here. 
 // 'file' must match the filename inside your Movies or Series folder.
 const myData = [
+    // Movies Name
     { name: "The Shawshank Redemption", type: "movie", rating: 5, file: "shawshank-redemption.html" },
+    { name: "The Lost Battalion", type: "movie", rating: 4, file: "lost-battalion.html" },
+    { name: "Now You See Me", type: "movie", rating: 5, file: "now-you-see-me.html" },
+    { name: "Miracle in Cell No 7", type: "movie", rating: 5, file: "miracle-in-cell-no-7.html" },
+    { name: "Mucize", type: "movie", rating: 5, file: "mucize.html" },
+
+
+    // Series Name
+    { name: "Game of Thrones", type: "series", rating: 5, file: "game-of-thrones.html" },
     { name: "Prison Break", type: "series", rating: 5, file: "prison-break.html" },
+    { name: "Breaking Bad", type: "series", rating: 5, file: "breaking-bad.html" },
+    { name: "Stranger Things", type: "series", rating: 5, file: "stranger-things.html" },
+    { name: "Taskaree: The Smuggler's Web", type: "series", rating: 4, file: "taskaree.html" },
 ];
 
 // RENDER LOGIC
