@@ -1,37 +1,44 @@
-/* General Page Styling */
+/* COLOR THEME SECTION*/
+:root {
+    --theme-color: #f709bf;    /* Main Header Color */
+    --link-color: #007bff;     /* Movie/Serial Name Color */
+    --hover-color: #fff0fb;    /* Row Hover Background Color */
+    --heart-color: #f709bf;    /* Filled Heart Color */
+    --heart-empty: #ddd;       /* Empty Heart Color */
+    --bg-color: #f9f9f9;
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    max-width: 900px;
+    max-width: 1100px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #f9f9f9;
+    background-color: var(--bg-color);
     color: #333;
 }
 
 h1 {
-    color: rgb(247, 9, 191);
-    border-bottom: 2px solid rgb(247, 9, 191);
+    color: var(--theme-color);
+    border-bottom: 2px solid var(--theme-color);
     padding-bottom: 10px;
 }
 
-/* Search Bar */
-#search-section {
-    margin: 20px 0;
-}
-
+/* Search and Filters */
 #searchInput {
     width: 100%;
     padding: 12px;
     font-size: 16px;
     border: 2px solid #ddd;
     border-radius: 8px;
-    outline: none;
+    box-sizing: border-box;
     transition: border-color 0.3s;
 }
 
-#searchInput:focus {
-    border-color: rgb(247, 9, 191);
-}
+#searchInput:focus { border-color: var(--theme-color); outline: none; }
+
+.filter-group { display: flex; gap: 10px; margin-top: 10px; flex-wrap: wrap; }
+.filter-group select { padding: 10px; border-radius: 8px; border: 2px solid #ddd; background: white; cursor: pointer; }
+.filter-group select:focus { border-color: var(--theme-color); outline: none; }
 
 /* Table Styling */
 table {
@@ -43,47 +50,78 @@ table {
     overflow: hidden;
 }
 
-th {
-    background-color: #eee;
-    padding: 15px;
-    text-align: left;
-    text-transform: uppercase;
-    font-size: 14px;
-    letter-spacing: 1px;
+th { background-color: #f4f4f4; padding: 15px; text-align: left; text-transform: uppercase; font-size: 14px; }
+
+/* Row Hover Effect */
+tbody tr {
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+tbody tr:hover {
+    background-color: var(--hover-color);
+    transform: scale(1.002); /* Very slight lift effect */
+}
+
+/* Distinct Gap between Columns */
+td + td, th + th {
+    border-left: 2px solid #eee;
+    padding-left: 25px; 
 }
 
 td {
     border-bottom: 1px solid #eee;
-    padding: 15px;
-    vertical-align: middle;
+    padding: 12px 15px;
     width: 50%;
 }
 
-/* Flexbox Wrapper for Name + Hearts */
+/* Tighter Item Layout */
 .item-wrapper {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 12px; /* Space between name and hearts */
-    flex-wrap: nowrap;
+    gap: 4px; /* Reduced gap */
 }
 
 .item-wrapper a {
     text-decoration: none;
-    color: #007bff;
+    color: var(--link-color); /* Controlled by :root */
     font-weight: 600;
-    white-space: nowrap;
 }
 
 .item-wrapper a:hover {
+    color: var(--theme-color);
     text-decoration: underline;
-    color: rgb(247, 9, 191);
 }
 
-/* Pink Heart Rating */
-.rating {
-    color: rgb(247, 9, 191);
-    font-size: 18px;
-    letter-spacing: 2px;
-    white-space: nowrap;
-    user-select: none;
+.rating-container {
+    display: flex;
+    align-items: center;
+    gap: 4px; /* Tighter gap between number and hearts */
+}
+
+.num-rating {
+    font-weight: bold;
+    font-size: 13px;
+    color: #777;
+    min-width: 24px;
+}
+
+.hearts-row { display: flex; gap: 1px; }
+
+.heart {
+    color: var(--heart-empty);
+    position: relative;
+    display: inline-block;
+    font-size: 13px;
+}
+
+.heart.filled { color: var(--heart-color); }
+.heart.half::after {
+    content: '♥';
+    color: var(--heart-color);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50%;
+    overflow: hidden;
 }
