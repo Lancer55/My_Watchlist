@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Series I Watched</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="tabs">
+        <a href="index.html" class="tab-btn">Home</a>
+        <a href="movies.html" class="tab-btn">Movies</a>
+        <a href="series.html" class="tab-btn active">Series</a>
+    </div>
+
+    <section id="search-section">
+        <input type="text" id="searchInput" placeholder="Search series..." onkeyup="filterList('series')">
+        <div class="filter-group">
+            <select id="genreFilter" onchange="filterList('series')">
+                <option value="all">All Genres</option>
+                <option value="Action">Action</option>
+                <option value="Adventure">Adventure</option>
+                <option value="Animation">Animation</option>
+                <option value="Biography">Biography</option>
+                <option value="Comedy">Comedy</option>
+                <option value="Crime">Crime</option>
+                <option value="Documentary">Documentary</option>
+                <option value="Drama">Drama</option>
+                <option value="Family">Family</option>
+                <option value="Fantasy">Fantasy</option>
+                <option value="History">History</option>
+                <option value="Horror">Horror</option>
+                <option value="Music">Music</option>
+                <option value="Musical">Musical</option>
+                <option value="Mystery">Mystery</option>
+                <option value="Romance">Romance</option>
+                <option value="Sci-Fi">Sci-Fi</option>
+                <option value="Sport">Sport</option>
+                <option value="Thriller">Thriller</option>
+                <option value="War">War</option>
+                <option value="Western">Western</option>
+            </select>
+            <select id="statusFilter" onchange="filterList('series')">
+                <option value="all">All Status</option>
+                <option value="Completed">Completed</option>
+                <option value="Another season coming">Another season coming</option>
+            </select>
+            <select id="ratingFilter" onchange="filterList('series')">
+                <option value="all">All Ratings</option>
+                <option value="9">9+</option>
+                <option value="7">7+</option>
+                <option value="5">5+</option>
+                <option value="3">3+</option>
+                <option value="1">1+</option>
+            </select>
+        </div>
+    </section>
+
+    <table id="watchlistTable">
+        <tbody id="tableBody"></tbody>
+    </table>
+
+    <script src="script.js"></script>
+    <script>window.onload = () => filterList('series');</script>
+</body>
+</html>
