@@ -12,26 +12,40 @@ const myData = [
     { name: "No Mercy", type: "movie", rating: 8.5, genre: "Crime", status: "Completed", file: "no-mercy.html" },
     { name: "Spider-Man", type: "movie", rating: 7.4, genre: "Action", status: "Completed", file: "spiderman.html" },
     { name: "Focus", type: "movie", rating: 8.5, genre: "Crime", status: "Completed", file: "focus.html" },
+    { name: "Bram Stoker's Dracula", type: "movie", rating: 7.4, genre: "Horror", status: "Completed", file: "dracula.html" },
+    { name: "The Fault in Our Stars", type: "movie", rating: 8.7, genre: "Romance", status: "Completed", file: "the-fault-in-our-stars.html" },
+    { name: "Anaconda", type: "movie", rating: 4, genre: "Horror", status: "Completed", file: "anaconda.html" },
+    { name: "Afterburn", type: "movie", rating: 4.5, genre: "Action", status: "Completed", file: "afterburn.html" },
+    { name: "Dhurandhar", type: "movie", rating: 8.3, genre: "Spy Thriller", status: "Completed", file: "dhurandhar.html" },
+    { name: "RRR", type: "movie", rating: 8.8, genre: "Action", status: "Completed", file: "rrr.html" },
+    { name: "K.G.F: Chapter 1", type: "movie", rating: 8.2, genre: "Action", status: "Completed", file: "kgf-chapter-1.html" },
+    { name: "K.G.F: Chapter 2", type: "movie", rating: 8.3, genre: "Action", status: "Completed", file: "kgf-chapter-2.html" },
+    { name: "Homebound", type: "movie", rating: 8.1, genre: "Drama", status: "Completed", file: "homebound.html" },
 
     // Serials
     { name: "Prison Break", type: "series", rating: 8.3, genre: "Action", status: "Completed", file: "prison-break.html" },
     { name: "Game of Thrones", type: "series", rating: 9.2, genre: "Fantasy", status: "Completed", file: "game-of-thrones.html" },
     { name: "Goblin", type: "series", rating: 8.6, genre: "Fantasy", status: "Completed", file: "goblin.html" },
     { name: "Narcos", type: "series", rating: 8.8, genre: "Crime", status: "Completed", file: "narcos.html" },
+    { name: "Da Vinci's Demons", type: "series", rating: 8, genre: "Adventure", status: "Completed", file: "da-vincis-demons.html" },
     { name: "Breaking Bad", type: "series", rating: 9.5, genre: "Crime", status: "Completed", file: "breaking-bad.html" },
     { name: "Descendants of the Sun", type: "series", rating: 8.2, genre: "Romance", status: "Another season coming", file: "descendants-of-the-sun.html" },
     { name: "Moon Lovers: Scarlet Heart Ryeo", type: "series", rating: 8.6, genre: "Fantasy", status: "Completed", file: "moon-lovers.html" },
     { name: "My Love from the Star", type: "series", rating: 8.2, genre: "Romance", status: "Completed", file: "my-love-from-the-star.html" },
     { name: "My Girlfriend is a Gumiho", type: "series", rating: 8.2, genre: "Fantasy", status: "Completed", file: "my-girlfriend-is-a-gumiho.html" },
     { name: "Mohanagar", type: "series", rating: 8.8, genre: "Crime", status: "Another season coming", file: "mohanagar.html"},
+    { name: "Dexter", type: "series", rating: 8.7, genre: "Crime", status: "Completed", file: "dexter.html" },
     { name: "The Family Man", type: "series", rating: 8.7, genre: "Action", status: "Another season coming", file: "the-family-man.html" },
+    { name: "Dark", type: "series", rating: 8.7, genre: "Sci-Fi", status: "Completed", file: "dark.html" },
     { name: "Suits", type: "series", rating: 8.4, genre: "Drama", status: "Completed", file: "suits.html" },
     { name: "Stranger Things", type: "series", rating: 8.7, genre: "Sci-Fi", status: "Completed", file: "stranger-things.html" },
     { name: "Spartacus", type: "series", rating: 8.5, genre: "Action", status: "Completed", file: "spartacus.html" },
     { name: "Arrow", type: "series", rating: 7.5, genre: "Action", status: "Completed", file: "arrow.html" },
     { name: "Taskaree", type: "series", rating: 7.8, genre: "Action", status: "Completed", file: "taskaree.html" },
-    { name: "The Gifted", type: "series", rating: 7.2, genre: "Sci-Fi", status: "Completed", file: "the-gifted.html" }
+    { name: "The Gifted", type: "series", rating: 7.2, genre: "Sci-Fi", status: "Completed", file: "the-gifted.html" },
+    { name: "Pharma", type: "series", rating: 7.2, genre: "Medical Thriller", status: "Completed", file: "pharma.html" }
 ];
+
 
 function getStarsHtml(rating) {
     const percentage = (rating / 10) * 100;
