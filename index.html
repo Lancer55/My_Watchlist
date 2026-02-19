@@ -23,15 +23,35 @@
         <input type="text" id="searchInput" placeholder="Search across the watchlists..." onkeyup="renderHome()">
     </section>
 
+    <div class="home-tabs">
+        <button id="recentTabBtn" class="home-tab-btn active" onclick="switchHomeTab('recent')">Recent Watched</button>
+        <button id="top10TabBtn" class="home-tab-btn" onclick="switchHomeTab('top10')">Top 10</button>
+    </div>
+
     <div id="home-content">
-        <section class="top-ranking">
-            <h2>🔥 Top 10 Movies</h2>
-            <div id="topMoviesList" class="home-grid"></div>
+        <section id="recentWatchedSection" class="home-section">
+            <table id="recentTable">
+                <thead>
+                    <tr>
+                        <th>Type</th>
+                        <th>Title</th>
+                        <th>Genre</th>
+                        <th>Rating</th>
+                    </tr>
+                </thead>
+                <tbody id="recentListBody"></tbody>
+            </table>
         </section>
 
-        <section class="top-ranking">
-            <h2>🔥 Top 10 Series</h2>
-            <div id="topSeriesList" class="home-grid"></div>
+        <section id="top10Section" class="home-section" style="display: none;">
+            <div class="top-ranking">
+                <h2>🔥 Top 10 Movies</h2>
+                <div id="topMoviesList" class="home-grid"></div>
+            </div>
+            <div class="top-ranking">
+                <h2>🔥 Top 10 Series</h2>
+                <div id="topSeriesList" class="home-grid"></div>
+            </div>
         </section>
     </div>
 
