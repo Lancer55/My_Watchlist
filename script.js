@@ -30,7 +30,8 @@ const myData = [
     { name: "Moon Lovers: Scarlet Heart Ryeo", type: "series", rating: 8.6, genre: "Fantasy", status: "Completed", file: "moon-lovers.html" },
     { name: "My Love from the Star", type: "series", rating: 8.2, genre: "Romance", status: "Completed", file: "my-love-from-the-star.html" },
     { name: "My Girlfriend is a Gumiho", type: "series", rating: 8.2, genre: "Fantasy", status: "Completed", file: "my-girlfriend-is-a-gumiho.html" },
-    { name: "Mohanagar", type: "series", rating: 8.8, genre: "Crime", status: "Another season coming", file: "mohanagar.html"},
+    { name: "Mohanagar", type: "series", rating: 8.8, genre: "Crime", status: "Another season coming", file: "mohanagar.html" },
+    { name: "Breathe", type: "series", rating: 8.3, genre: "Crime Thriller", status: "Completed", file: "breathe-2018.html" },
     { name: "Dexter", type: "series", rating: 8.7, genre: "Crime", status: "Completed", file: "dexter.html" },
     { name: "Dark", type: "series", rating: 8.7, genre: "Sci-Fi", status: "Completed", file: "dark.html" },
     { name: "Suits", type: "series", rating: 8.4, genre: "Drama", status: "Completed", file: "suits.html" },
@@ -48,6 +49,12 @@ const myData = [
     { name: "Nikita Roy and The Book of Darkness", type: "movie", rating: 7.4, genre: "Thriller", status: "Completed", file: "nikita-roy.html" },
     { name: "Highway", type: "movie", rating: 6.8, genre: "Thriller", status: "Completed", file: "highway-2022.html" },
     { name: "Me Before You", type: "movie", rating: 8, genre: "Romance", status: "Completed", file: "me-before-you.html" },
+    { name: "Cashero", type: "series", rating: 8.0, genre: "Superhero / Comedy", status: "Completed", file: "cashero.html" },
+    { name: "Missing", type: "movie", rating: 7.1, genre: "Thriller", status: "Completed", file: "missing-2018.html" },
+    { name: "The Proposal", type: "movie", rating: 7.5, genre: "Romance", status: "Completed", file: "the-proposal.html" },
+    { name: "Kill Boksoon", type: "movie", rating: 6.6, genre: "Action", status: "Completed", file: "kill-boksoon.html" },
+    { name: "Percy Jackson and the Olympians", type: "series", rating: 7.2, genre: "Adventure", status: "Another season coming", file: "percy-jackson.html" },
+    { name: "The Night Agent", type: "series", rating: 7.4, genre: "Action Thriller", status: "Another season coming", file: "the-night-agent.html" }
 ];
 
 let currentHomeTab = 'recent';
@@ -56,7 +63,7 @@ function switchHomeTab(tab) {
     currentHomeTab = tab;
     document.getElementById('recentTabBtn').classList.toggle('active', tab === 'recent');
     document.getElementById('top10TabBtn').classList.toggle('active', tab === 'top10');
-    
+
     document.getElementById('recentWatchedSection').style.display = (tab === 'recent') ? 'block' : 'none';
     document.getElementById('top10Section').style.display = (tab === 'top10') ? 'block' : 'none';
     renderHome();
@@ -77,18 +84,18 @@ function getStarsHtml(rating) {
 // HOME PAGE LOGIC
 function renderHome() {
     const q = document.getElementById('searchInput').value.toLowerCase();
-    
+
     if (currentHomeTab === 'recent') {
         const recentListBody = document.getElementById('recentListBody');
-        if(!recentListBody) return;
-        
+        if (!recentListBody) return;
+
         // This takes the absolute last 15 entries added to the array, 
         // regardless of if they are movies or series.
         const recentItems = [...myData]
-                            .reverse() 
-                            .filter(i => i.name.toLowerCase().includes(q))
-                            .slice(0, 15);
-        
+            .reverse()
+            .filter(i => i.name.toLowerCase().includes(q))
+            .slice(0, 15);
+
         recentListBody.innerHTML = recentItems.map(item => {
             const folder = item.type === 'movie' ? 'Movies' : 'Series';
             return `
@@ -99,16 +106,16 @@ function renderHome() {
                 <td><span class="love-indicator">❤️</span> ${item.rating}/10</td>
             </tr>`;
         }).join('');
-    } 
+    }
     else {
         const movieDiv = document.getElementById('topMoviesList');
         const seriesDiv = document.getElementById('topSeriesList');
-        if(!movieDiv || !seriesDiv) return;
+        if (!movieDiv || !seriesDiv) return;
 
         const topMovies = myData.filter(i => i.type === 'movie' && i.name.toLowerCase().includes(q))
-                                .sort((a,b) => b.rating - a.rating).slice(0, 10);
+            .sort((a, b) => b.rating - a.rating).slice(0, 10);
         const topSeries = myData.filter(i => i.type === 'series' && i.name.toLowerCase().includes(q))
-                                .sort((a,b) => b.rating - a.rating).slice(0, 10);
+            .sort((a, b) => b.rating - a.rating).slice(0, 10);
 
         movieDiv.innerHTML = topMovies.map(item => `
             <div class="home-card">
@@ -124,7 +131,7 @@ function renderHome() {
     }
 }
 
-    
+
 
 // LIST PAGE LOGIC (Remains exactly the same)
 function filterList(type) {
@@ -133,8 +140,8 @@ function filterList(type) {
     const s = document.getElementById('statusFilter').value;
     const r = document.getElementById('ratingFilter').value;
 
-    const filtered = myData.filter(item => 
-        item.type === type && 
+    const filtered = myData.filter(item =>
+        item.type === type &&
         item.name.toLowerCase().includes(q) &&
         (g === 'all' || item.genre === g) &&
         (s === 'all' || item.status === s) &&
@@ -142,14 +149,14 @@ function filterList(type) {
     );
 
     const tableBody = document.getElementById('tableBody');
-    if(!tableBody) return;
+    if (!tableBody) return;
     tableBody.innerHTML = '';
 
     for (let i = 0; i < filtered.length; i += 2) {
         const row = document.createElement('tr');
         row.innerHTML = `
             <td>${createCellContent(filtered[i])}</td>
-            <td>${filtered[i+1] ? createCellContent(filtered[i+1]) : ''}</td>
+            <td>${filtered[i + 1] ? createCellContent(filtered[i + 1]) : ''}</td>
         `;
         tableBody.appendChild(row);
     }

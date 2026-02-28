@@ -134,3 +134,50 @@ td:hover {
     color: #ff4d4d;
     font-size: 1.1rem;
 }
+
+/* Mobile Compatibility (Screens smaller than 768px) */
+
+@media screen and (max-width: 768px) {
+    body {
+        padding: 10px; /* Reduces side padding on mobile */
+    }
+
+    /* Stack the Movie/Series table cells vertically instead of side-by-side */
+    #watchlistTable tr {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #watchlistTable td {
+        width: 100%; /* Make each entry full width */
+        box-sizing: border-box;
+        margin-bottom: 10px;
+    }
+
+    /* Change Top 10 Home Grid from 2 columns to 1 column */
+    .home-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Adjust search input width for smaller screens */
+    #searchInput {
+        width: 95%;
+    }
+
+    /* Make filter dropdowns easier to tap */
+    .filter-group {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .filter-group select {
+        width: 95%;
+    }
+
+    /* Adjust Tab button padding for smaller thumbs */
+    .tab-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+}
