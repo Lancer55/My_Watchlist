@@ -24,7 +24,6 @@ const myData = [
     { name: "Goblin", type: "series", rating: 8.6, genre: "Fantasy", status: "Completed", file: "goblin.html" },
     { name: "Narcos", type: "series", rating: 8.8, genre: "Crime", status: "Completed", file: "narcos.html" },
     { name: "Da Vinci's Demons", type: "series", rating: 8, genre: "Adventure", status: "Completed", file: "da-vincis-demons.html" },
-    { name: "One Piece", type: "series", rating: 8.9, genre: "Adventure", status: "Another season coming", file: "one-piece.html" },
     { name: "Breaking Bad", type: "series", rating: 9.5, genre: "Crime", status: "Completed", file: "breaking-bad.html" },
     { name: "Descendants of the Sun", type: "series", rating: 8.2, genre: "Romance", status: "Another season coming", file: "descendants-of-the-sun.html" },
     { name: "Moon Lovers: Scarlet Heart Ryeo", type: "series", rating: 8.6, genre: "Fantasy", status: "Completed", file: "moon-lovers.html" },
@@ -54,7 +53,10 @@ const myData = [
     { name: "The Proposal", type: "movie", rating: 7.5, genre: "Romance", status: "Completed", file: "the-proposal.html" },
     { name: "Kill Boksoon", type: "movie", rating: 6.6, genre: "Action", status: "Completed", file: "kill-boksoon.html" },
     { name: "Percy Jackson and the Olympians", type: "series", rating: 7.2, genre: "Adventure", status: "Another season coming", file: "percy-jackson.html" },
-    { name: "The Night Agent", type: "series", rating: 7.4, genre: "Action Thriller", status: "Another season coming", file: "the-night-agent.html" }
+    { name: "The Night Agent", type: "series", rating: 7.4, genre: "Action Thriller", status: "Another season coming", file: "the-night-agent.html" },
+    { name: "Guzaarish", type: "movie", rating: 7.4, genre: "Drama", status: "Completed", file: "guzaarish-2010.html" },
+    { name: "Physical: 100", type: "series", rating: 8, genre: "Reality TV", status: "Another season coming", file: "physical-100.html" },
+    { name: "One Piece (Live Action)", type: "series", rating: 8.5, genre: "Adventure", status: "Another season coming", file: "one-piece-2023.html" }
 ];
 
 let currentHomeTab = 'recent';
