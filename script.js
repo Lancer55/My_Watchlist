@@ -53,10 +53,14 @@ const myData = [
     { name: "The Proposal", type: "movie", rating: 7.5, genre: "Romance", status: "Completed", file: "the-proposal.html" },
     { name: "Kill Boksoon", type: "movie", rating: 6.6, genre: "Action", status: "Completed", file: "kill-boksoon.html" },
     { name: "Percy Jackson and the Olympians", type: "series", rating: 7.2, genre: "Adventure", status: "Another season coming", file: "percy-jackson.html" },
-    { name: "The Night Agent", type: "series", rating: 7.4, genre: "Action Thriller", status: "Another season coming", file: "the-night-agent.html" },
     { name: "Guzaarish", type: "movie", rating: 7.4, genre: "Drama", status: "Completed", file: "guzaarish-2010.html" },
     { name: "Physical: 100", type: "series", rating: 8, genre: "Reality TV", status: "Another season coming", file: "physical-100.html" },
-    { name: "One Piece (Live Action)", type: "series", rating: 8.5, genre: "Adventure", status: "Another season coming", file: "one-piece-2023.html" }
+    { name: "One Piece (Live Action)", type: "series", rating: 8.5, genre: "Adventure", status: "Another season coming", file: "one-piece-2023.html" },
+    { name: "Kohrra", type: "series", rating: 7.6, genre: "Crime Thriller", status: "Another season coming", file: "kohrra.html" },
+    { name: "Kraven the Hunter", type: "movie", rating: 4.0, genre: "Action", status: "Completed", file: "kraven-the-hunter.html" },
+    { name: "Moon Knight", type: "series", rating: 7.3, genre: "Action", status: "Another season coming", file: "moon-knight.html" },
+    { name: "The Night Agent", type: "series", rating: 7.4, genre: "Action Thriller", status: "Another season coming", file: "the-night-agent.html" },
+    { name: "Last Samurai Standing", type: "series", rating: 8.2, genre: "Action", status: "Another season coming", file: "last-samurai-standing.html" },
 ];
 
 let currentHomeTab = 'recent';
