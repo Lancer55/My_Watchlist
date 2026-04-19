@@ -55,12 +55,16 @@ const myData = [
     { name: "Percy Jackson and the Olympians", type: "series", rating: 7.2, genre: "Adventure", status: "Another season coming", file: "percy-jackson.html" },
     { name: "Guzaarish", type: "movie", rating: 7.4, genre: "Drama", status: "Completed", file: "guzaarish-2010.html" },
     { name: "Physical: 100", type: "series", rating: 8, genre: "Reality TV", status: "Another season coming", file: "physical-100.html" },
-    { name: "One Piece (Live Action)", type: "series", rating: 8.5, genre: "Adventure", status: "Another season coming", file: "one-piece-2023.html" },
+    { name: "One Piece (Live Action)", type: "series", rating: 8.7, genre: "Adventure", status: "Another season coming", file: "one-piece-2023.html" },
     { name: "Kohrra", type: "series", rating: 7.6, genre: "Crime Thriller", status: "Another season coming", file: "kohrra.html" },
     { name: "Kraven the Hunter", type: "movie", rating: 4.0, genre: "Action", status: "Completed", file: "kraven-the-hunter.html" },
     { name: "Moon Knight", type: "series", rating: 7.3, genre: "Action", status: "Another season coming", file: "moon-knight.html" },
     { name: "The Night Agent", type: "series", rating: 7.4, genre: "Action Thriller", status: "Another season coming", file: "the-night-agent.html" },
     { name: "Last Samurai Standing", type: "series", rating: 8.2, genre: "Action", status: "Another season coming", file: "last-samurai-standing.html" },
+    { name: "Farzi", type: "series", rating: 8.4, genre: "Crime Thriller", status: "Another season coming", file: "farzi.html" },
+    { name: "See", type: "series", rating: 7.6, genre: "Sci-Fi", status: "Completed", file: "see.html" },
+    { name: "Supernatural", type: "series", rating: 8.4, genre: "Fantasy", status: "Completed", file: "supernatural.html" },
+    { name: "Laapataa Ladies", type: "movie", rating: 8.4, genre: "Comedy", status: "Completed", file: "laapataa-ladies.html" },
 ];
 
 let currentHomeTab = 'recent';
