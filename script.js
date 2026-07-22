@@ -63,8 +63,13 @@ const myData = [
     { name: "Last Samurai Standing", type: "series", rating: 8.2, genre: "Action", status: "Another season coming", file: "last-samurai-standing.html" },
     { name: "Farzi", type: "series", rating: 8.4, genre: "Crime Thriller", status: "Another season coming", file: "farzi.html" },
     { name: "See", type: "series", rating: 7.6, genre: "Sci-Fi", status: "Completed", file: "see.html" },
-    { name: "Supernatural", type: "series", rating: 8.4, genre: "Fantasy", status: "Completed", file: "supernatural.html" },
     { name: "Laapataa Ladies", type: "movie", rating: 8.4, genre: "Comedy", status: "Completed", file: "laapataa-ladies.html" },
+    { name: "Project Hail Mary", type: "movie", rating: 8.1, genre: "Sci-Fi", status: "Completed", file: "project-hail-mary.html" },
+    { name: "Vikings: Valhalla", type: "series", rating: 7.3, genre: "Action", status: "Completed", file: "vikings-valhalla.html" },
+    { name: "Supernatural", type: "series", rating: 8.4, genre: "Fantasy", status: "Completed", file: "supernatural.html" },
+    { name: "Michael", type: "movie", rating: 7.5, genre: "Drama", status: "Completed", file: "michael-2026.html" },
+    { name: "Avatar: The Last Airbender (Live Action)", type: "series", rating: 7.4, genre: "Fantasy", status: "Another season coming", file: "avatar-the-last-airbender.html" },
+    { name: "Agent Kim Reactivated", type: "series", rating: 8.3, genre: "Action", status: "Another season coming", file: "agent-kim-reactivated.html" },
 ];
 
 let currentHomeTab = 'recent';
