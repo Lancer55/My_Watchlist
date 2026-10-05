@@ -70,6 +70,11 @@ const myData = [
     { name: "Michael", type: "movie", rating: 7.5, genre: "Drama", status: "Completed", file: "michael-2026.html" },
     { name: "Avatar: The Last Airbender (Live Action)", type: "series", rating: 7.4, genre: "Fantasy", status: "Another season coming", file: "avatar-the-last-airbender.html" },
     { name: "Agent Kim Reactivated", type: "series", rating: 8.3, genre: "Action", status: "Another season coming", file: "agent-kim-reactivated.html" },
+    { name: "House of the Dragon", type: "series", rating: 8.4, genre: "Fantasy", status: "Another season coming", file: "house-of-the-dragon.html" },
+    { name: "Alpha", type: "movie", rating: 7.2, genre: "Action", status: "Completed", file: "alpha-2026.html" },
+    { name: "Person of Interest", type: "series", rating: 8.5, genre: "Sci-Fi", status: "Completed", file: "person-of-interest.html" },
+    { name: "Panchayat", type: "series", rating: 8.9, genre: "Comedy", status: "Another season coming", file: "panchayat.html" },
+    { name: "Shaque: Trust No One", type: "series", rating: 8.0, genre: "Thriller", status: "Another season coming", file: "shaque-trust-no-one.html" },
 ];
 
 let currentHomeTab = 'recent';
