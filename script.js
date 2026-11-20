@@ -72,9 +72,15 @@ const myData = [
     { name: "Agent Kim Reactivated", type: "series", rating: 8.3, genre: "Action", status: "Another season coming", file: "agent-kim-reactivated.html" },
     { name: "House of the Dragon", type: "series", rating: 8.4, genre: "Fantasy", status: "Another season coming", file: "house-of-the-dragon.html" },
     { name: "Alpha", type: "movie", rating: 7.2, genre: "Action", status: "Completed", file: "alpha-2026.html" },
+    { name: "Dil Bechara", type: "movie", rating: 9, genre: "Romance", status: "Completed", file: "dil-bechara.html" },
     { name: "Person of Interest", type: "series", rating: 8.5, genre: "Sci-Fi", status: "Completed", file: "person-of-interest.html" },
     { name: "Panchayat", type: "series", rating: 8.9, genre: "Comedy", status: "Another season coming", file: "panchayat.html" },
     { name: "Shaque: Trust No One", type: "series", rating: 8.0, genre: "Thriller", status: "Another season coming", file: "shaque-trust-no-one.html" },
+    { name: "Ali Baba aur 40 Bhoot", type: "series", rating: 7.5, genre: "Fantasy", status: "Another season coming", file: "ali-baba-aur-40-bhoot.html" },
+    { name: "Akka", type: "series", rating: 7.6, genre: "Crime", status: "Another season coming", file: "akka.html" },
+    { name: "Mirzapur: The Movie", type: "movie", rating: 7.9, genre: "Action", status: "Completed", file: "mirzapur-the-movie.html" },
+    { name: "The Odyssey", type: "movie", rating: 8.6, genre: "Adventure", status: "Completed", file: "the-odyssey.html" },
+    { name: "Chumbak", type: "series", rating: 7.8, genre: "Comedy", status: "Another season coming", file: "chumbak.html" },
 ];
 
 let currentHomeTab = 'recent';
